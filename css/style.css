@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   background-color: #292828;
+  font-family: 'Figtree', sans-serif;
 }
 header {
   display: flex;
@@ -13,7 +14,7 @@ header {
 header .logo {
   margin-right: auto;
   cursor: pointer;
-  color: #fff;
+  color: #D99908;
 }
 header nav ul {
   list-style-type: none;
@@ -37,7 +38,7 @@ header nav ul li a::before {
   height: 10%;
   opacity: 0;
   transform: translateX(-50%);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 header nav ul li a:hover::before {
   opacity: 1;
@@ -46,7 +47,7 @@ header nav ul li a:hover::before {
 header button {
   padding: 9px 25px;
   margin: 0 10px;
-  background-color: #ec852c;
+  background-color: #D99908;
   color: #fff;
   border: none;
   border-radius: 50px;

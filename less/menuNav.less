@@ -9,9 +9,9 @@ header {
 
     .logo {
         margin-right: auto;
-
         cursor: pointer;
-        color: #fff;
+        color: @accentColor;
+        
     }
 
         nav ul {
@@ -20,6 +20,7 @@ header {
         & li {
             display: inline-block;
             padding: 0 20px;
+            ;
             
         }
 
@@ -27,11 +28,6 @@ header {
             text-decoration: none;
             color: #fff;
             position: relative;
-            // transition: all 0.3s ease;
-
-            // &:hover {
-            //     color: rgb(236, 133, 44);
-            // }
 
             &::before {
                 content:"";
@@ -43,12 +39,13 @@ header {
                 height: 10%;
                 opacity: 0;
                 transform:translateX(-50%);
-                transition: all 0.3s ease;
+                transition: all 0.3s ease-in-out;
             }
 
             &:hover::before {
                 opacity: 1;
-                transform:translateX(0);
+                transform: translateX(0);
+                
             }
 
         }
@@ -57,7 +54,7 @@ header {
     button {
         padding: 9px 25px;
         margin: 0 10px;
-        background-color: rgb(236, 133, 44);
+        background-color: @accentColor;
         color: #fff;
         border: none;
         border-radius: 50px;
