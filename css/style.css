@@ -2,49 +2,57 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #292828;
   font-family: 'Figtree', sans-serif;
+}
+body {
+  background-color: #292828;
 }
 header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 30px 20px;
+  padding: 20px 20px;
+  background-color: #1F1F1F;
 }
-header .logo {
-  margin-right: auto;
-  cursor: pointer;
-  color: #D99908;
-}
-header nav ul {
-  list-style-type: none;
-}
-header nav ul li {
-  display: inline-block;
-  padding: 0 20px;
-}
-header nav ul li a {
-  text-decoration: none;
+.logo {
   color: #fff;
-  position: relative;
+  font-size: 1.5em;
+  margin-right: auto;
 }
-header nav ul li a::before {
-  content: "";
-  position: absolute;
-  background: #fff;
-  top: 110%;
-  left: 0;
-  width: 100%;
-  height: 10%;
-  opacity: 0;
-  transform: translateX(-50%);
+nav .hamburger .line {
+  background-color: #fff;
+  width: 50px;
+  height: 3px;
+  display: block;
+  margin: 10px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-header nav ul li a:hover::before {
-  opacity: 1;
-  transform: translateX(0);
+nav #hamburger-1.is-active .line:nth-child(2) {
+  opacity: 0;
 }
-header button {
+nav #hamburger-1.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(13px) rotate(45deg);
+  -ms-transform: translateY(13px) rotate(45deg);
+  -o-transform: translateY(13px) rotate(45deg);
+  transform: translateY(13px) rotate(45deg);
+}
+nav #hamburger-1.is-active .line:nth-child(3) {
+  -webkit-transform: translateY(-13px) rotate(-45deg);
+  -ms-transform: translateY(-13px) rotate(-45deg);
+  -o-transform: translateY(-13px) rotate(-45deg);
+  transform: translateY(-13px) rotate(-45deg);
+}
+nav ul {
+  list-style-type: none;
+  display: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+button {
   padding: 9px 25px;
   margin: 0 10px;
   background-color: #D99908;
@@ -52,5 +60,61 @@ header button {
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  display: none;
+}
+/********************** Média query en mode Bureau ****************************/
+@media screen and (min-width: 992px) {
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 20px;
+    background-color: transparent;
+  }
+  header .logo {
+    margin-right: auto;
+    cursor: pointer;
+    color: #fff;
+    font-size: 2em;
+  }
+  header nav ul {
+    list-style-type: none;
+  }
+  header nav ul li {
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 2em;
+  }
+  header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+  }
+  header nav ul li a::before {
+    content: "";
+    position: absolute;
+    background: #fff;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+  }
+  header nav ul li a:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  header button {
+    padding: 9px 25px;
+    margin: 0 10px;
+    background-color: #D99908;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 2em;
+  }
 }

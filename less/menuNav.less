@@ -1,69 +1,69 @@
-
-
 header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 30px 20px;
+    padding: 20px 20px;
+    background-color: #1F1F1F;
     
-
-    .logo {
-        margin-right: auto;
-        cursor: pointer;
-        color: @accentColor;
-        
-    }
-
-        nav ul {
-        list-style-type: none;
-
-        & li {
-            display: inline-block;
-            padding: 0 20px;
-            ;
-            
-        }
-
-        & li a {
-            text-decoration: none;
-            color: #fff;
-            position: relative;
-
-            &::before {
-                content:"";
-                position: absolute;
-                background: #fff;
-                top:110%;
-                left: 0;
-                width: 100%;
-                height: 10%;
-                opacity: 0;
-                transform:translateX(-50%);
-                transition: all 0.3s ease-in-out;
-            }
-
-            &:hover::before {
-                opacity: 1;
-                transform: translateX(0);
-                
-            }
-
-        }
-    }
-
-    button {
-        padding: 9px 25px;
-        margin: 0 10px;
-        background-color: @accentColor;
-        color: #fff;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
 }
 
+.logo {
+    color: #fff;
+    font-size: 1.5em;
+    margin-right: auto;
+}
+
+nav {
+    .hamburger .line {
+        background-color: #fff;
+        width: 50px;
+        height: 3px;
+        display: block;
+        margin: 10px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #hamburger-1.is-active .line:nth-child(2){
+        opacity: 0;
+      }
+      
+      #hamburger-1.is-active .line:nth-child(1){
+        -webkit-transform: translateY(13px) rotate(45deg);
+        -ms-transform: translateY(13px) rotate(45deg);
+        -o-transform: translateY(13px) rotate(45deg);
+        transform: translateY(13px) rotate(45deg);
+      }
+      
+      #hamburger-1.is-active .line:nth-child(3){
+        -webkit-transform: translateY(-13px) rotate(-45deg);
+        -ms-transform: translateY(-13px) rotate(-45deg);
+        -o-transform: translateY(-13px) rotate(-45deg);
+        transform: translateY(-13px) rotate(-45deg);
+      }
+}
+
+nav ul {
+    list-style-type: none;
+    display: none;
+
+    li a {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+button {
+    padding: 9px 25px;
+    margin: 0 10px;
+    background-color: @accentColor;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: none;
+}
 
 
 

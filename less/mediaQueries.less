@@ -1,0 +1,75 @@
+/********************** Média query en mode Bureau ****************************/
+
+@media screen and (min-width: 992px) {
+    header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 30px 20px;
+        background-color: transparent;
+        
+        
+    
+        .logo {
+            margin-right: auto;
+            cursor: pointer;
+            color: #fff;
+            font-size: 2em;
+            
+        }
+    
+            nav ul {
+            list-style-type: none;
+    
+            li {
+                display: inline-block;
+                padding: 0 20px;
+                font-size: 2em;
+                
+            }
+    
+            li a {
+                text-decoration: none;
+                color: #fff;
+                position: relative;
+    
+                &::before {
+                    content:"";
+                    position: absolute;
+                    background: #fff;
+                    top:110%;
+                    left: 0;
+                    width: 100%;
+                    height: 10%;
+                    opacity: 0;
+                    transform:translateX(-50%);
+                    transition: all 0.3s ease-in-out;
+                }
+    
+                &:hover::before {
+                    opacity: 1;
+                    transform: translateX(0);
+                    
+                }
+    
+            }
+        }
+    
+        button {
+            padding: 9px 25px;
+            margin: 0 10px;
+            background-color: @accentColor;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 2em;
+        }
+    
+    }    
+}
+
+    
+
+
