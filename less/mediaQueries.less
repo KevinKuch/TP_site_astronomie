@@ -6,10 +6,21 @@
     div.text-accueil {
         font-size: 1.6em;
     }
+
+    section#explore {
+        font-size: 1.6em;
+    }
+
+    section#experience {
+        font-size: 1.6em;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 
-
+    
 
 
 
@@ -28,7 +39,7 @@
 
     nav {
         all: unset;
-
+        z-index: 300;
         ul {
            margin-top: 0;
 
@@ -66,12 +77,12 @@
 
     header {
         all: unset;
-
         display:flex;
         justify-content: flex-end;
         align-items: center;
         padding: 0 20px;
         margin: -38px auto; // Temporary fix for the header
+        z-index: 250;
     }
 
     .logo {
