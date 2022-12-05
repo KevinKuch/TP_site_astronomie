@@ -71,8 +71,8 @@ div.text-accueil p:first-of-type {
   padding-bottom: 0.3em;
 }
 section#explore {
-  height: 100vh;
   background-image: url(../medias/imgDeco2Ciel.jpg);
+  padding-bottom: 4em;
 }
 section#explore h2 {
   text-align: center;
@@ -100,20 +100,20 @@ section#explore button {
 section#explore button a {
   text-decoration: none;
 }
-section#explore .lottiePng {
+section#explore .lottieAnim {
   display: block;
   margin: 0 auto;
-  width: 80%;
-  height: auto;
 }
 section#experience {
-  height: 100vh;
+  background-color: grey;
+  padding-bottom: 2em;
 }
 section#experience h2 {
   text-align: center;
   font-size: 1.2em;
   font-weight: 700;
   color: #D99908;
+  padding-top: 2em;
   padding-bottom: 1em;
   margin-top: 6em;
 }
@@ -127,9 +127,9 @@ section#experience p {
 section#experience img {
   display: block;
   margin: 0 auto;
-  width: 50%;
+  width: 60%;
   height: auto;
-  border-radius: 0.5em;
+  border-radius: 1em;
 }
 header {
   display: flex;
@@ -203,8 +203,9 @@ nav ul li a {
   transition: opacity 250ms ease-in-out 250ms;
 }
 footer {
-  background: grey;
+  background: #000;
   height: 20em;
+  padding-left: 2em;
 }
 footer .logo {
   font-size: 2.2em;
@@ -213,6 +214,9 @@ footer .logo {
 }
 footer .footer-links a {
   text-decoration: none;
+}
+footer ul li {
+  list-style-type: none;
 }
 @media screen and (min-width: 768px) {
   div.text-accueil {
@@ -225,6 +229,9 @@ footer .footer-links a {
     font-size: 1.6em;
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  section#experience img {
+    width: 80%;
   }
 }
 @media screen and (min-width: 1024px) {
