@@ -1,6 +1,26 @@
+// /********************** Média query en mode Tablette ****************************/
+
+@media screen and (min-width:768px) {
+    
+
+    div.text-accueil {
+        font-size: 1.6em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 // /********************** Média query en mode Bureau ****************************/
 
-@media screen and (min-width:992px) {
+@media screen and (min-width:1024px) {
     .nav-toggle-hamburger {
         display: none;
     }
@@ -10,7 +30,8 @@
         all: unset;
 
         ul {
-            
+           margin-top: 0;
+
             li {
                 display: inline-block;
                 padding: 0 20px;
@@ -19,12 +40,13 @@
                 a {
                     opacity: 1;
                     position: relative;
+                    font-size: 1.2em;
 
                     &::before {
                         content:"";
                         position: absolute;
                         background: #fff;
-                        top:110%;
+                        top:100%;
                         left: 0;
                         width: 100%;
                         height: 10%;
@@ -48,7 +70,8 @@
         display:flex;
         justify-content: flex-end;
         align-items: center;
-        padding: 10px 20px;
+        padding: 0 20px;
+        margin: -38px auto; // Temporary fix for the header
     }
 
     .logo {
@@ -57,9 +80,14 @@
         color:#fff;
         font-size: 2em;
     }
-}
 
-// /********************** Média query en mode Tablette ****************************/
+    div.text-accueil {
+        text-align: left;
+        margin-left: 1em;
+        margin-top: 6em;
+        font-size: 2em;
+    }
+}
 
 
 
