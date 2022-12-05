@@ -11,14 +11,14 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 20px 20px;
+  padding: 8px 20px;
   background-color: #1F1F1F;
   position: fixed;
   width: 100vw;
 }
 .logo {
   color: #fff;
-  font-size: 1.5em;
+  font-size: 1em;
   margin-right: auto;
   cursor: pointer;
 }
@@ -53,8 +53,8 @@ nav ul li a {
 }
 .hamburger .line {
   background-color: #fff;
-  width: 50px;
-  height: 3px;
+  width: 40px;
+  height: 2px;
   display: block;
   margin: 10px auto;
   transition: all 0.3s ease-in-out;
@@ -74,4 +74,49 @@ nav ul li a {
 .nav-toggle:checked ~ nav a {
   opacity: 1;
   transition: opacity 250ms ease-in-out 250ms;
+}
+@media screen and (min-width: 992px) {
+  .nav-toggle-hamburger {
+    display: none;
+  }
+  nav {
+    all: unset;
+  }
+  nav ul li {
+    display: inline-block;
+    padding: 0 20px;
+  }
+  nav ul li a {
+    opacity: 1;
+    position: relative;
+  }
+  nav ul li a::before {
+    content: "";
+    position: absolute;
+    background: #fff;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+  }
+  nav ul li a:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  header {
+    all: unset;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  .logo {
+    margin-right: auto;
+    cursor: pointer;
+    color: #fff;
+    font-size: 2em;
+  }
 }
