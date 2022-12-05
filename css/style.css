@@ -19,6 +19,7 @@ body {
   margin: 0 auto;
   width: 50%;
 }
+/************************** 1er Section de la page Accueil **************************/
 section#land-page {
   height: 100vh;
   width: 100%;
@@ -44,35 +45,45 @@ section#land-page img {
   object-position: center;
   z-index: -1;
 }
-section#land-page .img-perso-col {
+section#land-page .img-sol {
   z-index: 10;
 }
-div.text-accueil {
-  margin-top: 2.5em;
-  text-align: center;
-  z-index: 5;
+div#text-accueil-container {
   position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 4em;
+  height: 100vh;
 }
-div.text-accueil h2 {
+div#text-accueil-container .text-accueil {
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+}
+div#text-accueil-container .text-accueil h2 {
   text-transform: uppercase;
   font-size: 1em;
   font-weight: 700;
 }
-div.text-accueil .logo {
+div#text-accueil-container .text-accueil .logo {
   font-size: 3.2em;
   color: #D99908;
   margin: 0.2em 0;
 }
-div.text-accueil p {
+div#text-accueil-container .text-accueil p {
   font-weight: 300;
   font-size: 0.8em;
 }
-div.text-accueil p:first-of-type {
+div#text-accueil-container .text-accueil p:first-of-type {
   padding-bottom: 0.3em;
 }
+/************************** 2eme Section de la page Accueil **************************/
 section#explore {
+  position: relative;
   background-image: url(../medias/imgDeco2Ciel.jpg);
   padding-bottom: 4em;
+  z-index: 100;
+  border: 1px solid transparent;
 }
 section#explore h2 {
   text-align: center;
@@ -104,9 +115,12 @@ section#explore .lottieAnim {
   display: block;
   margin: 0 auto;
 }
+/************************** 3eme Section de la page Accueil **************************/
 section#experience {
+  position: relative;
   background-color: grey;
   padding-bottom: 2em;
+  z-index: 100;
 }
 section#experience h2 {
   text-align: center;
@@ -178,6 +192,7 @@ nav ul li a {
   transition: opacity 150ms ease-in-out;
   position: relative;
 }
+/*************************** Menu Hamburger ***********************************/
 .hamburger .line {
   background-color: #fff;
   width: 40px;
@@ -208,7 +223,7 @@ footer {
   padding-left: 2em;
 }
 footer .logo {
-  font-size: 2.2em;
+  font-size: 1.2em;
   color: #D99908;
   margin: 0.2em 0;
 }
@@ -283,12 +298,6 @@ footer ul li {
     margin-right: auto;
     cursor: pointer;
     color: #fff;
-    font-size: 2em;
-  }
-  div.text-accueil {
-    text-align: left;
-    margin-left: 1em;
-    margin-top: 6em;
     font-size: 2em;
   }
 }

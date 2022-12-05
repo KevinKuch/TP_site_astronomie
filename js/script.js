@@ -1,3 +1,4 @@
+/******** Function pour menu hamburger *******************/
 $(document).ready(function(){
     $(".hamburger").click(function(){
       $(this).toggleClass("is-active");
@@ -5,26 +6,23 @@ $(document).ready(function(){
     });
   });
 
-  // $(window).on('scroll', function() {
-  //   let parallax = $(".img-person-col");
-  //   let scrollPosition = $(this).scrollTop();
-  //   parallax.css("transform", "translateY(" + scrollPosition * 0.5 + "px" + ")");
-  // });
+/******** Function pour parallax effect *******************/
 
-// Effet de parralax
+let textAccueil = document.getElementById("textAccueil");
+let imgCiel = document.getElementById("imgCiel");
+window.addEventListener('scroll', () => {
+  let value = window.scrollY;
+  // console.log(value);
+  textAccueil.style.marginTop = value * 1.5 + 'px';
 
-// let imgCiel = document.getElementsByClassName('img-ciel');
-// let imgPerso = document.getElementsByClassName('img-person-sol');
-// let textAccueil = document.getElementsByClassName('text-accueil');
+  if (value > 600) {
+    textAccueil.style.display = "none";
+  } else {
+    textAccueil.style.display = "block";
+  }
 
-// window.addEventListener('scroll', function() {
-//     let value = window.scrollY;
 
-//     imgCiel.style.top = value * 0.7 + 'px';
-//     imgPerso.style.bottom = value * 0.5 + 'px';
-//     textAccueil.style.top = value * 1 + 'px';
-// });
-
+});
 
 
 

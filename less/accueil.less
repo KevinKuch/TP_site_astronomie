@@ -1,4 +1,4 @@
-
+/************************** 1er Section de la page Accueil **************************/
 section#land-page {
     height: 100vh;
     width: 100%;
@@ -27,7 +27,7 @@ section#land-page {
         
     }
 
-    .img-perso-col {
+    .img-sol {
         z-index: 10;
     }
 
@@ -44,42 +44,53 @@ section#land-page {
 
 }
 
+div#text-accueil-container {
 
-div.text-accueil {
-    // border: 1px solid red;
-    margin-top: 2.5em;
-    text-align: center;
-    z-index: 5;
     position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+    height: 100vh;
 
-    h2 {
-        text-transform: uppercase;
-        font-size: 1em;
-        font-weight: 700;
-    }
-
-    .logo {
-        font-size: 3.2em;
-        color: @accentColor;
-        margin: 0.2em 0;
-    }
-
-    p {
-        font-weight: 300;
-        font-size: 0.8em;
-
-        &:first-of-type {
-            padding-bottom: 0.3em;
+    .text-accueil {
+   
+        text-align: center;
+        z-index: 1;
+        position: absolute;
+    
+        h2 {
+            text-transform: uppercase;
+            font-size: 1em;
+            font-weight: 700;
+        }
+    
+        .logo {
+            font-size: 3.2em;
+            color: @accentColor;
+            margin: 0.2em 0;
+        }
+    
+        p {
+            font-weight: 300;
+            font-size: 0.8em;
+    
+            &:first-of-type {
+                padding-bottom: 0.3em;
+            }
         }
     }
+
 }
 
 
+/************************** 2eme Section de la page Accueil **************************/
 section#explore {
-    
-    
+    position: relative;
     background-image: url(../medias/imgDeco2Ciel.jpg);
     padding-bottom: 4em;
+    z-index: 100;
+    border: 1px solid transparent;
+
     h2 {
         text-align: center;
         font-size: 1.2em;
@@ -118,10 +129,12 @@ section#explore {
     
 }
 
+/************************** 3eme Section de la page Accueil **************************/
 section#experience {
-   
+    position: relative;
     background-color: grey;
     padding-bottom: 2em;
+    z-index: 100;
 
     h2 {
         text-align: center;
