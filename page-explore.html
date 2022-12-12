@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP astronomie Boréalides</title>
+    <title>Page infos-planète</title>
 
     <!-- Reference style sheet -->
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
@@ -28,14 +28,14 @@
     <script src="js/jquery-3.6.1.min.js"></script>
     <!-- Reference library js -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    
+    <script src="js/jquery.hislide.js"></script>
 </head>
+
 <body>
     <header>
         <h1 class="logo-nav"><a href="#index.html">Boréalides</a></h1>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <nav>
-            <span class="bar-recherche">Recherche<i class="fa-solid fa-magnifying-glass"></i></span>
             <ul class="menu-nav">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="page-explore.html">Explore</a></li>
@@ -53,55 +53,26 @@
         </label>
     </header>
 
-    <main class="accueil">
-        <section id="land-page">
-            <div id="text-accueil-container">
-                <div id="textAccueil" class="text-accueil">
-                    <h2 class="text-accueil-anim">Centre d'astronomie</h2>
-                    <h1 class="logo-section text-accueil-anim">Boréalides</h1>
-                    <p class="text-accueil-anim">L'endroit où vous pouvez tout voir dans le ciel.</p>
-                    <p class="text-accueil-anim">Une expérience à ne pas manquer.</p>
-                    <div class="defiler-container">
-                        <div class="defiler-bas">
-                            <a href="#explore"><span></span></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <img id="img-ciel" class="img-ciel" src="medias/land-page-ciel-desktop.png" alt="">
-            <img id="img-sol" class="img-sol" src="medias/land-page-person-desktop.png" alt="">
-        </section>
-
-        <section id="explore" class="section-container">
-            
-            <div class="text-explore-container">
-                <h2 class="titre-section">Infos-planète</h2>
-                <p class="text-desc">Vous voulez s'avoir davantage sur le système solaire qui réside dans notre galaxy?</p>
-                <p class="text-desc">Vous y trouverez toute sorte d'information dans notre page d'infos-planète.</p>
-                <button class="btn-explore"><a href="page-explore.html">Explore</a></button>
-            </div>
-
-            <div class="planet-container">
-                <div class="planet-terre-accueil"></div>
-            </div>
-            
-        </section>
-
-        <section id="experience" class="section-container">
-            <div class="experience-container">
-                <h2 class="titre-section">Planètarium</h2>
-                <img class="experience-image" src="medias/imgDeco1.jpg" alt="">
-                <p class="text-desc">Dans notre centre d'astronomie, nous avons un observatoire dans lequelle vous pouvez observez le ciel!</p>
-            </div>
-
-            <div class="experience-container">
-                <h2 class="titre-section">Espace VR</h2>
-                <img class="experience-image" src="medias/vr2.jpg" alt="">
-                <p class="text-desc">Venez vivre une expérience immersive dans notre espace réalité virtuelle.</p>
-            </div>
+    <main id="page-explore">
+        <section class="slide hi-slide">
+            <div class="hi-prev"></div>
+            <div class="hi-next"></div>
+            <ul class="image-planet">
+                <li><img src="/medias/plane-img/jupiter.png" alt=""></li>
+                <li><img src="/medias/plane-img/mars.png" alt=""></li>
+                <li><img src="/medias/plane-img/mercury.png" alt=""></li>
+                <li><img src="/medias/plane-img/terre.png" alt=""></li>
+                <li><img src="/medias/plane-img/uranus.png" alt=""></li>
+                <li><img src="/medias/plane-img/saturn.png" alt=""></li>
+                <li> <img src="/medias/plane-img/neptune.png" alt=""></li>
+                <li><img src="/medias/plane-img/venus.png" alt=""></li>
+            </ul>
         </section>
     </main>
+
+
+
+
 
     <footer>
         <div class="footer-container">

@@ -2,7 +2,6 @@
 $(document).ready(function(){
     $(".hamburger").click(function(){
       $(this).toggleClass("is-active");
-      
     });
   });
 
@@ -23,6 +22,15 @@ window.addEventListener('scroll', () => {
 });
 
 
+/******** Function pour scroll animation sur btn *******************/
+$(function() {
+  $('a[href*=#]').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+  });
+});
+
+
 /******** Effect animation des contenus *******************/
 
 ScrollReveal({
@@ -40,5 +48,9 @@ ScrollReveal().reveal('.text-desc', { delay: 700, origin: 'bottom', interval: 15
 ScrollReveal().reveal('.btn-explore', { delay: 850, origin: 'right' });
 ScrollReveal().reveal('.experience-image', { delay: 650, origin: 'top', interval: 150 });
 ScrollReveal().reveal('.experience-image', { delay: 650, origin: 'top', interval: 150 });
+ScrollReveal().reveal('.defiler-container', { delay: 600, origin: 'bottom'});
 
 
+/******** Function pour carrousel dans la page-explore *******************/
+
+$('.slide').hiSlide();
