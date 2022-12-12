@@ -9,18 +9,40 @@
     color: #fff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #000;
 }
 
-.logo {
+.logo-nav {
     font-family: @fontLogo;
     font-weight: 500;
     letter-spacing: 5px;
 }
 
+
 .center {
     display: block;
     margin: 0 auto;
     width: 50%;
+}
+
+h2 {
+    font-size: clamp(1rem, 5vw, 2.1rem)
+}
+
+.logo-section {
+    font-size: clamp(4rem, 20vw, 10rem);
+    font-weight: 500;
+    font-family: @fontLogo;
+    color: @accentColor;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+p {
+    font-size: clamp(0.9rem, 4vw, 1.4rem);
 }

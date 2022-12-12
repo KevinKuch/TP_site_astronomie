@@ -6,10 +6,13 @@
   font-family: 'Figtree', sans-serif;
   color: #fff;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #000;
 }
-.logo {
+.logo-nav {
   font-family: 'Teko', sans-serif;
   font-weight: 500;
   letter-spacing: 5px;
@@ -18,6 +21,20 @@ body {
   display: block;
   margin: 0 auto;
   width: 50%;
+}
+h2 {
+  font-size: clamp(1rem, 5vw, 2.1rem);
+}
+.logo-section {
+  font-size: clamp(4rem, 20vw, 10rem);
+  font-weight: 500;
+  font-family: 'Teko', sans-serif;
+  color: #D99908;
+  letter-spacing: 4px;
+  margin: 0;
+}
+p {
+  font-size: clamp(0.9rem, 4vw, 1.4rem);
 }
 /************************** 1er Section de la page Accueil **************************/
 section#land-page {
@@ -52,7 +69,7 @@ div#text-accueil-container {
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 4em;
+  margin-top: 2em;
   height: 100vh;
 }
 div#text-accueil-container .text-accueil {
@@ -62,21 +79,16 @@ div#text-accueil-container .text-accueil {
 }
 div#text-accueil-container .text-accueil h2 {
   text-transform: uppercase;
-  font-size: 1em;
   font-weight: 700;
-}
-div#text-accueil-container .text-accueil .logo {
-  font-size: 3.2em;
-  color: #D99908;
-  margin: 0.2em 0;
 }
 div#text-accueil-container .text-accueil p {
   font-weight: 300;
-  font-size: 0.8em;
+  padding: 0 5em;
 }
 div#text-accueil-container .text-accueil p:first-of-type {
   padding-bottom: 0.3em;
 }
+/** Animation des pages **/
 /************************** 2eme Section de la page Accueil **************************/
 section#explore {
   position: relative;
@@ -84,66 +96,84 @@ section#explore {
   padding-bottom: 4em;
   z-index: 100;
   border: 1px solid transparent;
+  /** Animation de la planete Terre **/
 }
 section#explore h2 {
   text-align: center;
-  font-size: 1.2em;
   font-weight: 700;
   color: #D99908;
   padding-bottom: 1em;
-  margin-top: 6em;
 }
 section#explore p {
   text-align: center;
-  font-size: 0.8em;
   font-weight: 300;
-  padding-bottom: 1em;
+  padding: 0 1em;
   line-height: 2em;
+  margin-bottom: 2em;
 }
-section#explore button {
+section#explore .btn-explore {
   display: block;
-  margin: 2em auto 0 auto;
+  margin: 0 auto 2em auto;
   padding: 8px 20px;
   border-radius: 20px;
   background-color: #D99908;
   text-decoration: none;
 }
-section#explore button a {
+section#explore .btn-explore a {
   text-decoration: none;
+  font-size: clamp(0.9rem, 4vw, 1.4rem);
 }
-section#explore .lottieAnim {
+section#explore .planet-terre-accueil {
   display: block;
-  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(/medias/image-terre.jpeg);
+  border-radius: 50%;
+  background-size: cover;
+  box-shadow: -20px -20px 50px 2px rgba(35, 105, 204, 0.473) inset, 0 0 20px 2px rgba(34, 122, 222, 0.618);
+  animation: animePlanet 10s linear infinite;
+}
+@keyframes animePlanet {
+  to {
+    background-position: 100%;
+  }
 }
 /************************** 3eme Section de la page Accueil **************************/
 section#experience {
-  position: relative;
   background-color: grey;
-  padding-bottom: 2em;
   z-index: 100;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 section#experience h2 {
   text-align: center;
-  font-size: 1.2em;
   font-weight: 700;
   color: #D99908;
-  padding-top: 2em;
-  padding-bottom: 1em;
-  margin-top: 6em;
+  padding-bottom: 1rem;
 }
 section#experience p {
   text-align: center;
-  font-size: 0.8em;
   font-weight: 300;
-  padding: 2em 2em 0 2em;
-  line-height: 2em;
+  line-height: 1.2em;
+  padding-top: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 section#experience img {
   display: block;
   margin: 0 auto;
   width: 60%;
-  height: auto;
+  height: 60%;
   border-radius: 1em;
+  object-fit: cover;
+}
+section#experience .experience-container {
+  margin: 1.5em 0;
 }
 header {
   display: flex;
@@ -155,7 +185,7 @@ header {
   width: 100vw;
   z-index: 100000;
 }
-.logo {
+.logo-nav {
   color: #fff;
   font-size: 1.2em;
   margin-right: auto;
@@ -234,15 +264,11 @@ footer ul li {
   list-style-type: none;
 }
 @media screen and (min-width: 768px) {
-  div.text-accueil {
-    font-size: 1.6em;
-  }
-  section#explore {
-    font-size: 1.6em;
+  section#explore .planet-terre-accueil {
+    width: 400px;
+    height: 400px;
   }
   section#experience {
-    font-size: 1.6em;
-    display: grid;
     grid-template-columns: 1fr 1fr;
   }
   section#experience img {
@@ -250,6 +276,7 @@ footer ul li {
   }
 }
 @media screen and (min-width: 1024px) {
+  /** Menu navigation **/
   .nav-toggle-hamburger {
     display: none;
   }
@@ -299,5 +326,31 @@ footer ul li {
     cursor: pointer;
     color: #fff;
     font-size: 2em;
+  }
+  .logo-section {
+    font-weight: 500;
+    font-family: 'Teko', sans-serif;
+    color: #D99908;
+    letter-spacing: 4px;
+  }
+  /** Section Explore **/
+  section#explore {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  section#explore .text-explore-container {
+    grid-column: 1/3;
+  }
+  section#explore .btn-explore {
+    grid-column: 1/3;
+  }
+  section#explore .planet-terre-accueil {
+    width: 600px;
+    height: 600px;
+    grid-column: 3/4;
+  }
+  /** Section Experience **/
+  section#experience {
+    grid-template-columns: 1fr 1fr;
   }
 }

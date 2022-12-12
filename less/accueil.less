@@ -49,7 +49,7 @@ div#text-accueil-container {
     position: relative;
     display: flex;
     justify-content: center;
-    margin-top: 4em;
+    margin-top: 2em;
     height: 100vh;
 
     .text-accueil {
@@ -60,20 +60,12 @@ div#text-accueil-container {
     
         h2 {
             text-transform: uppercase;
-            font-size: 1em;
             font-weight: 700;
-        }
-    
-        .logo {
-            font-size: 3.2em;
-            color: @accentColor;
-            margin: 0.2em 0;
         }
     
         p {
             font-weight: 300;
-            font-size: 0.8em;
-    
+            padding: 0 5em;
             &:first-of-type {
                 padding-bottom: 0.3em;
             }
@@ -82,6 +74,7 @@ div#text-accueil-container {
 
 }
 
+/** Animation des pages **/
 
 /************************** 2eme Section de la page Accueil **************************/
 section#explore {
@@ -93,24 +86,23 @@ section#explore {
 
     h2 {
         text-align: center;
-        font-size: 1.2em;
         font-weight: 700;
         color: @accentColor;
         padding-bottom: 1em;
-        margin-top: 6em;
+        
     }
 
     p {
         text-align: center;
-        font-size: 0.8em;
         font-weight: 300;
-        padding-bottom: 1em;
+        padding: 0 1em;
         line-height: 2em;
+        margin-bottom: 2em;;
     }
 
-    button {
+    .btn-explore {
         display: block;
-        margin: 2em auto 0 auto;
+        margin: 0 auto 2em auto;
         padding: 8px 20px;
         border-radius: 20px;
         background-color: @accentColor;
@@ -118,51 +110,74 @@ section#explore {
 
         a {
             text-decoration: none;
+            font-size: clamp(0.9rem, 4vw, 1.4rem);
         }
     }
 
-    .lottieAnim {
+    .planet-terre-accueil {
         display: block;
-        margin: 0 auto;
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url(/medias/image-terre.jpeg);
+        border-radius: 50%;
+        background-size: cover;
+        box-shadow: -20px -20px 50px 2px rgba(35, 105, 204, 0.473) inset, 0 0 20px 2px rgba(34, 122, 222, 0.618);
+        animation: animePlanet 10s linear infinite;
     }
 
+    /** Animation de la planete Terre **/
+    @keyframes animePlanet {
+        to {
+            background-position: 100%;
+        }
+    }
     
 }
 
 /************************** 3eme Section de la page Accueil **************************/
 section#experience {
-    position: relative;
+
     background-color: grey;
-    padding-bottom: 2em;
     z-index: 100;
+
+    display: grid;
+    grid-template-columns: 1fr;
 
     h2 {
         text-align: center;
-        font-size: 1.2em;
+        // font-size: 1.2em;
         font-weight: 700;
         color: @accentColor;
-        padding-top: 2em;
-        padding-bottom: 1em;
-        margin-top: 6em;
+        padding-bottom: 1rem;
     }
 
     p {
         text-align: center;
-        font-size: 0.8em;
         font-weight: 300;
-        padding: 2em 2em 0 2em;
-        line-height: 2em;
+        line-height: 1.2em;
+        padding-top: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
     }
 
     img {
         display: block;
         margin: 0 auto;
         width: 60%;
-        height: auto;
+        height: 60%;
         border-radius: 1em;
+        object-fit: cover;
     }
 
-   
+    .experience-container {
+        margin: 1.5em 0;
+    }
+
 }
 
 

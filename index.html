@@ -23,14 +23,15 @@
 
     <!-- Reference script Jquery -->
     <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     
 </head>
 <body>
     <header>
-        <h1 class="logo">Boréalides</h1>
+        <h1 class="logo-nav">Boréalides</h1>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <nav>
-            <ul>
+            <ul class="menu-nav">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="#">Explore</a></li>
                 <li><a href="#">Articles</a></li>
@@ -51,48 +52,41 @@
         <section id="land-page">
             <div id="text-accueil-container">
                 <div id="textAccueil" class="text-accueil">
-                    <h2>Centre d'astronomie</h2>
-                    <h1 class="logo">Boréalides</h1>
-                    <p>L'endroit où vous pouvez tout voir dans le ciel.</p>
-                    <p>Une expérience à ne pas manquer.</p>
+                    <h2 class="text-accueil-anim">Centre d'astronomie</h2>
+                    <h1 class="logo-section text-accueil-anim">Boréalides</h1>
+                    <p class="text-accueil-anim">L'endroit où vous pouvez tout voir dans le ciel.</p>
+                    <p class="text-accueil-anim">Une expérience à ne pas manquer.</p>
                 </div>
             </div>
-
-            
                 <img id="img-ciel" class="img-ciel" src="medias/land-page-ciel-desktop.png" alt="">
                 <img id="img-sol" class="img-sol" src="medias/land-page-person-desktop.png" alt="">
                 <!-- <img class="galaxy" src="medias/imgDeco3.png" alt=""> -->
+        </section>
+
+        <section id="explore" class="section-container">
+            
+            <div class="text-explore-container">
+                <h2 class="titre-section">Infos-planète</h2>
+                <p class="text-desc">Vous voulez s'avoir davantage sur le système solaire qui réside dans notre galaxy?</p>
+                <p class="text-desc">Vous y trouverez toute sorte d'information dans notre page d'infos-planète.</p>
+                <button class="btn-explore"><a href="#">Explore</a></button>
+            </div>
+            <div class="planet-terre-accueil"></div>
             
         </section>
 
-        <section id="explore">
-            <h2>Infos-planète</h2>
-            <p>Vous voulez s'avoir davantage sur le système solaire qui réside dans notre galaxy?</p>
-            <p>Vous y trouverez toute sorte d'information dans notre page d'infos-planète.</p>
-
-
-            <div class="lottieAnim">
-                <iframe src="https://embed.lottiefiles.com/animation/107763"></iframe>
-            </div>
-            <!-- <img class="lottiePng" src="medias/galaxyLottie.png" alt=""> -->
-
-            <button><a href="#">Explore</a></button>
-        </section>
-
-        <section id="experience">
-
-            <div class="contain1">
-                <h2>Planètarium</h2>
-                <img src="medias/imgDeco1.jpg" alt="">
-                <p>Dans notre centre d'astronomie, nous avons un observatoire dans lequelle vous pouvez observez le ciel!</p>
+        <section id="experience" class="section-container">
+            <div class="contain1 experience-container">
+                <h2 class="titre-section">Planètarium</h2>
+                <img class="experience-image" src="medias/imgDeco1.jpg" alt="">
+                <p class="text-desc">Dans notre centre d'astronomie, nous avons un observatoire dans lequelle vous pouvez observez le ciel!</p>
             </div>
 
-            <div class="contain2">
-                <h2>Espace VR</h2>
-                <img src="medias/vr_img.png" alt="">
-                <p>Venez vivre une expérience immersive dans notre espace réalité virtuelle.</p>
+            <div class="contain2 experience-container">
+                <h2 class="titre-section">Espace VR</h2>
+                <img class="experience-image" src="medias/vr2.jpg" alt="">
+                <p class="text-desc">Venez vivre une expérience immersive dans notre espace réalité virtuelle.</p>
             </div>
-
         </section>
     </main>
 
@@ -122,5 +116,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    
 </body>
 </html>
