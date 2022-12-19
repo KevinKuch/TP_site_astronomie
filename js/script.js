@@ -49,6 +49,8 @@ ScrollReveal().reveal('.btn-explore', { delay: 850, origin: 'right' });
 ScrollReveal().reveal('.experience-image', { delay: 650, origin: 'top', interval: 150 });
 ScrollReveal().reveal('.experience-image', { delay: 650, origin: 'top', interval: 150 });
 ScrollReveal().reveal('.defiler-container', { delay: 600, origin: 'bottom'});
+ScrollReveal().reveal('.img-ciel', { delay: 600, origin: 'top', distance: '40px'});
+ScrollReveal().reveal('.img-sol', { delay: 600, origin: 'bottom', distance: '40px'});
 
 
 /******** Function pour carrousel dans la page-explore *******************/
