@@ -169,6 +169,7 @@ section#land-page img {
   z-index: -1;
 }
 section#land-page .img-sol {
+  padding-top: 10em;
   z-index: 10;
 }
 div#text-accueil-container {
@@ -263,6 +264,7 @@ section#explore {
   position: relative;
   background-image: url(../medias/imgDeco2Ciel.jpg);
   padding-bottom: 4em;
+  padding-top: 10em;
   z-index: 100;
   /** Animation de la planete Terre **/
 }
