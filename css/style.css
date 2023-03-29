@@ -129,7 +129,6 @@ nav .bar-recherche i {
 footer {
   background: #000;
   height: 20em;
-  padding-left: 2em;
 }
 footer .logo {
   font-size: 1.2em;
@@ -141,6 +140,12 @@ footer .footer-links a {
 }
 footer ul li {
   list-style-type: none;
+}
+footer .credit {
+  margin-top: 1em;
+  text-align: center;
+  display: grid;
+  place-self: center;
 }
 /************************** 1er Section de la page Accueil **************************/
 section#land-page {
@@ -581,40 +586,9 @@ main#page-explore {
   section#experience {
     grid-template-columns: 1fr 1fr;
   }
+  /** Footer **/
   .footer-container {
-    flex-direction: row;
-  }
-  .footer-container .footer-links {
-    margin-left: 2em;
-  }
-  .footer-container h1 {
-    font-size: 2rem;
-  }
-  .footer-container ul li {
-    font-size: 1.4rem;
-  }
-  .footer-container .email-form {
-    margin-left: 6em;
-  }
-  .footer-container .email-form h3 {
-    font-size: 1.5rem;
-    padding-bottom: 1rem;
-  }
-  .footer-container .email-form input {
-    margin-bottom: 1em;
-  }
-  .footer-container .email-form button {
-    margin-bottom: 1em;
-  }
-  .footer-container .contact {
-    width: 80%;
-    margin-left: 1em;
-  }
-  .footer-container .contact h3 {
-    font-size: 1.5rem;
-  }
-  .credit {
-    margin-top: 1em;
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
